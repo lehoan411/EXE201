@@ -6,6 +6,7 @@ const db = require("./models");
 const AccountRouter = require("./routes/account.route");
 const ProductRouter = require("./routes/product.route");
 const CartRouter = require("./routes/cart.route");
+const OrderRouter = require("./routes/order.route");
 const cors = require("cors");
 require("dotenv").config();
 
@@ -27,6 +28,7 @@ app.get("/", async (req, res, next) => {
 app.use("/auth", AccountRouter);
 app.use("/product", ProductRouter);
 app.use("/cart", CartRouter);
+app.use("/order", OrderRouter);
 
 // Them middleware kiem soat requests loi cho web server
 app.use(async(req, res, next) => {

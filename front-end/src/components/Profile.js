@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button, Form, Modal, Alert } from "react-bootstrap";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const UserProfile = () => {
     const [user, setUser] = useState({});
@@ -72,7 +73,7 @@ const UserProfile = () => {
                                 
                             </div>
                             <div style={{ textAlign: "center", margin: "10px" }}>
-                            <Button>Lịch sử mua hàng</Button>
+                            <Button> <Link to={"/order/history"}>Lịch sử mua hàng</Link> </Button>
                             </div>
 
                         </Card.Body>

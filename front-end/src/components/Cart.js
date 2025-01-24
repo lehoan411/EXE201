@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Table, Image } from "react-bootstrap";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const [cart, setCart] = useState(null);
@@ -132,6 +133,8 @@ const Cart = () => {
           </tbody>
         </Table>
       )}
+
+      <Button> <Link to={"/order"}>Check out </Link></Button>
     </Container>
   );
 };
